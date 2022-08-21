@@ -1,0 +1,98 @@
+.message {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.message a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* nav */
+
+.open_menu,
+.close_menu {
+  display: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.close_menu {
+  opacity: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.7rem 0;
+}
+
+.nav_item {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 1rem;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    padding: 1rem;
+  }
+  .open_menu {
+    display: block;
+  }
+  .nav_items {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    right: 100%;
+    padding: 1rem;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .nav_item {
+    margin: 1rem 0;
+  }
+  .nav_items_mobile {
+    top: 75%;
+    height: 20vh;
+  }
+  .nav_items_mobile a:last-child {
+    width: fit-content;
+  }
+  .close_menu {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 11;
+  }
+  .close_menu i {
+    font-size: 3rem;
+    color: #4e4b4b;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav {
+    padding: 0;
+  }
+  .message {
+    background-color: #000;
+    color: #fff;
+    padding: 0.8rem 1.1rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
